@@ -2,7 +2,7 @@ Current Release: V3.0.0
 
 # Introduction
 
-This repository pulls in the src from the  React Automation Studio repository https://github.com/wduckitt/React-Automation-Studio.git and acts a standalone boiler plate example project for React Automation Studio without having to delve into the source code of the master repository.
+This repository pulls in the src from the  React Automation Studio repository https://github.com/wduckitt/React-Automation-Studio.git and acts a standalone boiler plate alarm handler project for React Automation Studio without having to delve into the source code of the master repository.
 
 The system has been containerised with Docker and version controlled as a mono-repository using Git.
 
@@ -120,7 +120,7 @@ https://docs.docker.com/compose/install/
 
 Then first clone this repo:
 ```bash
-git clone --recurse-submodules https://github.com/wduckitt/React-Automation-Studio-Example-Project-1.git
+git clone --recurse-submodules https://github.com/wduckitt/React-Automation-Studio-Alarm-Handler-Standalone.git
 ```
 
 Then checkout the correct version with the correct tagname:
