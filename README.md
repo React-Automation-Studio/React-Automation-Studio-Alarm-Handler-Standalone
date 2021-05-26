@@ -161,7 +161,7 @@ The systems uses Docker to create isolated production and development environmen
 docker-compose -f docker-compose-prod-with-demoioc.yml up 
 
 ```
-Will launch the production build with demoIOCs included.
+Will launch the production build with demoIOCs included. **This is the recommended compose file to use the first time you build the alarm handler as it brings up demo pvs used for demonstrating the alarm handler's functionalities.**
 
 
 ```bash
@@ -225,7 +225,7 @@ To change the URL, ports, and enable user authentication See section 6.1 and 6.2
 
 # 3 Enabling user login, authentication and https
 
-If it is intended to run the application locally on a pc then no authentication is needed and the users' system login will protect access.
+**The alarm handler MUST be run with authentication enabled. This allows alarm users to be defined with specific roles and access rights.**
 
 If access is required on a mobile device or from another pc then is encourage to enable HTTPS and user authentication.
 
@@ -437,6 +437,9 @@ The token expiry is controlled by the following variables in the .env file.
 ```bash
   REACT_APP_DISABLE_DEMOS=true
 ```
+
+**This will disable the default demo alarm pvs shown in the alarm handler's alarm table.**
+
 # 4 Folder structure
 This section has some notes on  systems folder structure:
 
