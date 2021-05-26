@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import AccountCircle from '@material-ui/icons/AccountCircle';
+import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 
 import AlarmHandler from './React-Automation-Studio/components/AlarmHandler/AlarmHandler'
 
@@ -15,7 +15,7 @@ const Main = () => {
   const vaultDemo = enableDemos
     ? (
       <ListItem button component={Link} to="/VaultDemo" target="_blank">
-        <ListItemIcon><AccountCircle /></ListItemIcon>
+        <ListItemIcon><AccountBalanceIcon /></ListItemIcon>
         <ListItemText primary="Vault Demo" />
       </ListItem>
     )
