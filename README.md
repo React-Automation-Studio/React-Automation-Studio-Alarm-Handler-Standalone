@@ -161,7 +161,7 @@ The systems uses Docker to create isolated production and development environmen
 docker-compose -f docker-compose-prod-with-demoioc.yml up 
 
 ```
-Will launch the production build with demoIOCs included.
+Will launch the production build with demoIOCs included. **This is the recommended compose file to use the first time you build the alarm handler as it brings up demo pvs used for demonstrating the alarm handler's functionalities.**
 
 
 ```bash
@@ -225,7 +225,7 @@ To change the URL, ports, and enable user authentication See section 6.1 and 6.2
 
 # 3 Enabling user login, authentication and https
 
-If it is intended to run the application locally on a pc then no authentication is needed and the users' system login will protect access.
+**The alarm handler MUST be run with authentication enabled. This allows alarm users to be defined with specific roles and access rights.**
 
 If access is required on a mobile device or from another pc then is encourage to enable HTTPS and user authentication.
 
@@ -248,7 +248,7 @@ They will be prompted to enter the username and password or authenticate useing 
 The username and password or token is then  transmitted to the backend for authentication. If authenticated, the server returns  encrypted Jason web token (JWT) in the form on an access and refresh token. This is used to keep the user logged in between session. No username or password is stored in the browser. The user must logout in order cancel the session.
 
 
-If the access token is invalid the user will be redirected to the login screen. The default access, and refresh token expiry is 300 seconds and 1 week. By default the access token and refresh tokens are rfreshed once a minute.
+If the access token is invalid the user will be redirected to the login screen. The default access, and refresh token expiry is 300 seconds and 1 week. By default the access token and refresh tokens are refreshed once a minute.
 
 All tokens of all users can also be invalidated by declaring a new secret key in the  environment variable: SECRET_PWD_KEY . If the SECRET_PWD_KEY  is not defined then a predefined key will be used .
 
@@ -437,6 +437,9 @@ The token expiry is controlled by the following variables in the .env file.
 ```bash
   REACT_APP_DISABLE_DEMOS=true
 ```
+
+**This will disable the default demo alarm pvs shown in the alarm handler's alarm table.**
+
 # 4 Folder structure
 This section has some notes on  systems folder structure:
 
