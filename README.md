@@ -152,6 +152,14 @@ If not and you previously checked out a different version run:
 ```bash
 git pull --recurse-submodules
 ```
+
+Finally create a template environment file, in React Automation Studio installation folder run:
+```bash
+cp example.env .env
+```
+
+This file can be edited as described in the sections below to configure React Automation Studio.
+
 # 2 Launching the Docker compose files
 The systems uses Docker to create isolated production and development environments. There are several docker-compose configuration files.
 
