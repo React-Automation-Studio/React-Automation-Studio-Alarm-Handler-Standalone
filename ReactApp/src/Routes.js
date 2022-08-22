@@ -7,14 +7,14 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom'
 import MainDashboard from './React-Automation-Studio/components/UI/MainDashboard';
 import Vault from './React-Automation-Studio/components/AlarmHandler/Vault';
 //system
-import Login from './React-Automation-Studio/components/SystemComponents/Login';
-import Probe from './React-Automation-Studio/components/SettingsPages/Probe';
-import Help from './React-Automation-Studio/components/docs/Help';
-import Main from './Main';
-import AutomationStudioContext from 'React-Automation-Studio/components/SystemComponents/AutomationStudioContext';
-import Administrator from 'React-Automation-Studio/components/Administrator/Administrator.js';
-import UserProfile from 'React-Automation-Studio/components/SystemComponents/userProfiles/UserProfile';
-import ProtectedRoute from 'React-Automation-Studio/components/SystemComponents/ProtectedRoute';
+import Login from "./React-Automation-Studio/components/SystemComponents/Login";
+import Probe from "./React-Automation-Studio/components/SettingsPages/Probe";
+import Help from "./React-Automation-Studio/components/docs/Help";
+import Main from "./Main";
+import AutomationStudioContext from "React-Automation-Studio/components/SystemComponents/AutomationStudioContext";
+import Administrator from "React-Automation-Studio/components/Administrator/Administrator.js";
+import UserProfile from "React-Automation-Studio/components/SystemComponents/userProfiles/UserProfile";
+import ProtectedRoute from "React-Automation-Studio/components/SystemComponents/ProtectedRoute";
 
 const Routes = (props) => {
   const context = useContext(AutomationStudioContext);
@@ -24,28 +24,29 @@ const Routes = (props) => {
   const roles = context.userData.roles;
   
   return (
-    <BrowserRouter >
-
+    <BrowserRouter>
       <Switch>
-
-      <ProtectedRoute exact path="/" component={Main} />
+        <ProtectedRoute exact path="/" component={Main} />
         <ProtectedRoute exact path="/MainDashboard" component={MainDashboard} />
-        <ProtectedRoute exact path="/Administrator" component={Administrator} roles={['admin']} />
+        <ProtectedRoute
+          exact
+          path="/Administrator"
+          component={Administrator}
+          roles={["admin"]}
+        />
         <ProtectedRoute path="/UserProfile" component={UserProfile} />
-        {process.env.REACT_APP_EnableLogin === 'true' &&
+        {process.env.REACT_APP_EnableLogin === "true" && (
           <Route
-            exact 
+            exact
             path="/Login"
-            component={() =>
-              <Login 
-               
-               footerString= "Login is now customizable"
-               version="V3.0.1"
-               timeout={5000}
-               />
-            }
+            component={() => (
+              <Login
+                version="V4.0.0"
+                timeout={5000}
+              />
+            )}
           />
-        }
+        )}
         <ProtectedRoute path="/Probe" component={Probe} />
         <ProtectedRoute path="/Help" component={Help} />
         {/*system end*/}
@@ -53,19 +54,8 @@ const Routes = (props) => {
         {/*staging start*/}
         <ProtectedRoute path="/VaultDemo" component={Vault} />
         {/*staging end*/}
-
-
-
-
-
-
-
-
-
-
       </Switch>
-
     </BrowserRouter>
-  )
-}
+  );
+};
 export default Routes;
