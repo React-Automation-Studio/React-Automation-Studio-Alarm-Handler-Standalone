@@ -25,8 +25,8 @@ const AppRoutes = (props) => {
   /* eslint-disable-next-line no-unused-vars */
   const username = context.userData.username;
   let enableDemos =
-    typeof import.meta.env.VITE__DISABLE_DEMOS !== "undefined"
-      ? !(import.meta.env.VITE__DISABLE_DEMOS.toUpperCase() === "TRUE")
+    typeof import.meta.env.VITE_DISABLE_DEMOS !== "undefined"
+      ? !(import.meta.env.VITE_DISABLE_DEMOS.toUpperCase() === "TRUE")
       : true;
 
   return (
