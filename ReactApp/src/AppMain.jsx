@@ -11,8 +11,10 @@ import AlarmHandler from './React-Automation-Studio/components/AlarmHandler/Alar
 
 const Main = () => {
 
-  let enableDemos = typeof process.env.REACT_APP_DISABLE_DEMOS !== 'undefined' ? !(process.env.REACT_APP_DISABLE_DEMOS.toUpperCase() === 'TRUE') : true;
-
+  let enableDemos =
+  typeof import.meta.env.VITE__DISABLE_DEMOS !== "undefined"
+    ? !(import.meta.env.VITE__DISABLE_DEMOS.toUpperCase() === "TRUE")
+    : true;
   const context = useContext(AutomationStudioContext)
 
   const username = useMemo(() => {
