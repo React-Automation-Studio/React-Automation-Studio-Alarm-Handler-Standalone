@@ -3,15 +3,15 @@ import React, { useContext } from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 
 /// demos
-import MainDashboard from './React-Automation-Studio/components/UI/MainDashboard';
-import Vault from './React-Automation-Studio/components/AlarmHandler/Vault';
+import MainDashboard from 'React-Automation-Studio/components/UI/MainDashboard';
+import Vault from 'React-Automation-Studio/components/AlarmHandler/Vault';
 //system
-import Login from "./React-Automation-Studio/components/SystemComponents/Login";
-import Probe from "./React-Automation-Studio/components/SettingsPages/Probe";
-import Help from "./React-Automation-Studio/components/docs/Help";
+import Login from "React-Automation-Studio/components/SystemComponents/Login";
+import Probe from "React-Automation-Studio/components/SettingsPages/Probe";
+import Help from "React-Automation-Studio/components/docs/Help";
 import AppMain from "./AppMain";
 import AutomationStudioContext from "React-Automation-Studio/components/SystemComponents/AutomationStudioContext";
-import Administrator from "React-Automation-Studio/components/Administrator/Administrator.js";
+import Administrator from "React-Automation-Studio/components/Administrator/Administrator";
 import UserProfile from "React-Automation-Studio/components/SystemComponents/userProfiles/UserProfile";
 import ProtectedRoute from "React-Automation-Studio/components/SystemComponents/ProtectedRoute";
 
