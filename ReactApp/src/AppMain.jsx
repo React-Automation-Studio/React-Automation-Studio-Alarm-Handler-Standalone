@@ -6,8 +6,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 
-import AutomationStudioContext from './React-Automation-Studio/components/SystemComponents/AutomationStudioContext';
-import AlarmHandler from './React-Automation-Studio/components/AlarmHandler/AlarmHandler'
+import AutomationStudioContext from 'React-Automation-Studio/components/SystemComponents/AutomationStudioContext';
+import AlarmHandler from 'React-Automation-Studio/components/AlarmHandler/AlarmHandler'
 
 const Main = () => {
 
