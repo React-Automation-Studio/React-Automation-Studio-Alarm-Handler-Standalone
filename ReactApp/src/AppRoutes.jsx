@@ -30,18 +30,19 @@ const AppRoutes = (props) => {
       : true;
 
   return (
+    //For all changes see the migration stragey from V4.0.3 to V5.0.5 in the documentation
     <BrowserRouter>
       <Routes>
-      <Route
+        <Route
           exact
           path="/"
           element={
             <ProtectedRoute>
-              <AppMain/>
+              <AppMain />
             </ProtectedRoute>
           }
         />
-       <Route
+        <Route
           exact
           path="/MainDashboard"
           element={
@@ -59,7 +60,6 @@ const AppRoutes = (props) => {
             </ProtectedRoute>
           }
         />
-        {/* <ProtectedRoute path="/UserProfile" component={UserProfile} /> */}
         {import.meta.env.VITE__EnableLogin === "true" && (
           <Route
             exact
@@ -72,6 +72,7 @@ const AppRoutes = (props) => {
             )}
           />
         )}
+
         <Route
           path="/UserProfile"
           element={
